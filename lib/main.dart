@@ -43,7 +43,8 @@ class RandomWordsState extends State<RandomWords> {
                       colors: [
                     Color.fromRGBO(249, 240, 227, 1),
                     Color.fromRGBO(250, 248, 245, 1)
-                  ])),
+                  ]),
+              ),
             ),
           ),
           new Container(
@@ -75,6 +76,32 @@ class RandomWordsState extends State<RandomWords> {
                 ),
               )
           ),
+          new Container(
+            padding: EdgeInsets.only(top: height * 0.65),
+            child: Align(
+              alignment: Alignment.topCenter,
+              child: Text('CÙNG THƯ GIÃN',
+                style: TextStyle(
+                    fontSize: 24,
+                    color: Color.fromRGBO(63, 65, 78, 1),
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+          ),
+          new Container(
+            padding: EdgeInsets.only(top: height * 0.70, left: 50, right: 50),
+            child: Align(
+              alignment: Alignment.topCenter,
+              child: Text('Mình sẽ giúp bạn thư giãn sau một ngày làm việc '
+                  'căng thẳng ❤❤',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 14,
+                    color: Color.fromRGBO(161, 164, 178, 1),
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+          ),
           new GestureDetector(
             onTap: () {print('object');},
             child: new Container(
@@ -93,7 +120,28 @@ class RandomWordsState extends State<RandomWords> {
               decoration: BoxDecoration(
                   shape: BoxShape.rectangle,
                   color: Color.fromRGBO(142, 151, 253, 1),
-                  borderRadius: BorderRadius.circular(50)
+                  borderRadius: BorderRadius.circular(50),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color.fromRGBO(142, 151, 253, 0.5),
+                      spreadRadius: 3,
+                      blurRadius: 7,
+                      offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+              ),
+            ),
+          ),
+          new Container(
+            padding: EdgeInsets.only(top: height * 0.89, left: 50, right: 50),
+            child: Align(
+              alignment: Alignment.topCenter,
+              child: Text('Liên hệ với mình',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 14,
+                    color: Color.fromRGBO(161, 164, 178, 1),
+                    fontWeight: FontWeight.bold),
               ),
             ),
           ),
